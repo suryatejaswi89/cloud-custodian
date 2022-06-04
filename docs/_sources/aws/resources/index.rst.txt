@@ -202,4 +202,6 @@ be applies for all resources.
 
    group-waf-regional.rst
 
+   group-wafv2.rst
+
    group-workspaces.rst
