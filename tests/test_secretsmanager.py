@@ -44,7 +44,7 @@ class TestSecretsManager(BaseTest):
         self.assertTrue(len(resources), 1)
         aliases = kms.list_aliases(KeyId=resources[0]['KmsKeyId'])
         self.assertEqual(aliases['Aliases'][0]['AliasName'], 'alias/skunk/trails')
-        
+
     def test_secrets_manager_tag_resource(self):
         session = self.replay_flight_data("test_secrets_manager_tag")
         client = session(region="us-east-1").client("secretsmanager")

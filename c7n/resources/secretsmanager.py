@@ -42,10 +42,11 @@ class CrossAccountAccessFilter(iamaccess.CrossAccountAccessFilter):
             SecretId=r['Name']).get('ResourcePolicy', None)
         return p
 
+
 @SecretsManager.filter_registry.register('kms-key')
 class KmsFilter(KmsRelatedFilter):
-
     RelatedIdsExpression = 'KmsKeyId'
+
 
 @SecretsManager.action_registry.register('tag')
 class TagSecretsManagerResource(Tag):
